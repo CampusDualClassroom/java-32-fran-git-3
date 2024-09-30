@@ -37,7 +37,7 @@ public class Exercise32 {
     public static void printToFile(String string) {
         String filePath = "src/main/resources/data.txt"; // Ajustamos la ruta del archivo según el test
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, false))) { // Cambiar true a false
             // Escribimos la cadena en el archivo
             writer.write(generateStringToSave(string));
             System.out.println("Texto guardado en el archivo.");
